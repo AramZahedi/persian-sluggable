@@ -41,7 +41,7 @@ echo $model->slug; // "سلام-دنیا"
 <br>
 
 ``` bash
-composer require AramZahedi/persian-sluggable
+composer require aram-zahedi/persian-sluggable
 ```
 
 ## طریقه استفاده
