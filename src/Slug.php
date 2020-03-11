@@ -10,12 +10,13 @@ class Slug
     protected static $instance;
 
     /**
-     * Space values to replace
+     * Characters to replace
      *
      * @var array
      */
-    protected $space_values = [
-        ' ', "\u{200C}", "\u{FEFF}", "\u{200B}", "\u{180E}"
+    protected $to_replace = [
+        ' ', "\u{200C}", "\u{FEFF}", "\u{200B}", "\u{180E}", '_', '-', '.',
+        '?', '؟', '!', ',', '،', ':', '«', '»', ')', '('
     ];
 
     /**
@@ -130,7 +131,7 @@ class Slug
      */
     protected function convertWhitespaces()
     {
-        $this->slug = str_replace($this->space_values,
+        $this->slug = str_replace($this->to_replace,
             $this->separator, $this->slug);
     }
 
