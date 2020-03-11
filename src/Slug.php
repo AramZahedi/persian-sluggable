@@ -141,11 +141,11 @@ class Slug
      */
     protected function removeMultipleSeparators()
     {
-        $this->slug = preg_replace('/'
+        $this->slug = rtrim(preg_replace('/'
             . (ctype_alpha($this->separator)
                 ? $this->separator : '\\' . $this->separator)
             . '+/',
-            $this->separator, $this->slug);
+            $this->separator, $this->slug), $this->separator);
     }
 
     /**
