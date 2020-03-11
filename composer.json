@@ -1,0 +1,41 @@
+{
+    "name": "AramZahedi/persian-sluggable",
+    "description": "Generate Persian slugs when saving Eloquent models",
+    "keywords": [
+        "AramZahedi",
+        "persian-sluggable"
+    ],
+    "homepage": "https://gitlab.com/AramZahedi/persian-sluggable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aram Zahedi",
+            "email": "aram1376@yahoo.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5",
+        "illuminate/database": "^6.0|^7.0",
+        "ext-ctype": "*",
+        "ext-mbstring": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AramZahedi\\Sluggable\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AramZahedi\\Sluggable\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
