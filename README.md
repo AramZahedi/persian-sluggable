@@ -1,6 +1,6 @@
 # تولید خودکار اسلاگ (نامک) برای لاراول 
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/AramZahedi/persian-sluggable.svg?style=flat-square)](https://packagist.org/packages/aram-zahedi/persian-sluggable)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/aram-zahedi/persian-sluggable.svg?style=flat-square)](https://packagist.org/packages/aram-zahedi/persian-sluggable)
 
 This package is a localized version of [Spatie\Sluggable](https://github.com/spatie/laravel-sluggable) with Persian language support.
 
