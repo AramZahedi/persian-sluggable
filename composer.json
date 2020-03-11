@@ -16,12 +16,11 @@
   ],
   "require": {
     "php": "^7.2.5",
-    "illuminate/database": "^6.0|^7.0",
+    "illuminate/database": "^5.8|^6.0|^7.0",
     "ext-ctype": "*",
     "ext-mbstring": "*"
   },
   "require-dev": {
-    "orchestra/testbench": "^5.0"
   },
   "autoload": {
     "psr-4": {
@@ -30,7 +29,6 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "AramZahedi\\Sluggable\\Tests\\": "tests"
     }
   },
   "scripts": {
