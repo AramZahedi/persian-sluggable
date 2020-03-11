@@ -34,8 +34,8 @@ class Persian
      */
     public static function convertArabicCharacters($value)
     {
-        $arabicChars = ["ي", "ك", "دِ", "بِ", "زِ", "ذِ", "ِشِ", "ِسِ", "ى"];
-        $persianChars = ["ی", "ک", "د", "ب", "ز", "ذ", "ش", "س", "ی"];
+        $arabicChars = ["ي", "ك", "دِ", "بِ", "زِ", "ذِ", "ِشِ", "ِسِ", "ى", "ؤ"];
+        $persianChars = ["ی", "ک", "د", "ب", "ز", "ذ", "ش", "س", "ی", "و"];
 
         return str_replace($arabicChars, $persianChars, $value);
     }

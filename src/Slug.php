@@ -152,7 +152,7 @@ class Slug
     protected function cleanSlug()
     {
         $this->slug = mb_ereg_replace(
-            '[^' . 'ابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهیئء'
+            '[^' . 'آابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهیئء'
             . 'a-zA-Z0-9'
             . (ctype_alpha($this->separator) ? $this->separator : '\\' . $this->separator)
             . ']',
