@@ -102,6 +102,8 @@ class Slug
 
         $this->cleanSlug();
 
+        $this->trimSlug();
+
         $this->convertToLowercase();
 
         return $this->slug;
@@ -141,16 +143,11 @@ class Slug
      */
     protected function removeMultipleSeparators()
     {
-        $this->slug = ltrim(
-            rtrim(
-                preg_replace('/'
-                    . (ctype_alpha($this->separator)
-                        ? $this->separator : '\\' . $this->separator)
-                    . '+/',
-                    $this->separator, $this->slug),
-                $this->separator
-            ), $this->separator
-        );
+        $this->slug = preg_replace('/'
+            . (ctype_alpha($this->separator)
+                ? $this->separator : '\\' . $this->separator)
+            . '+/',
+            $this->separator, $this->slug);
     }
 
     /**
@@ -164,6 +161,18 @@ class Slug
             . (ctype_alpha($this->separator) ? $this->separator : '\\' . $this->separator)
             . ']',
             '', $this->slug
+        );
+    }
+
+    /**
+     * Trim slug for unwanted separators
+     */
+    protected function trimSlug()
+    {
+        $this->slug = ltrim(
+            rtrim($this->slug,
+                $this->separator
+            ), $this->separator
         );
     }
 
