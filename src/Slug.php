@@ -98,9 +98,9 @@ class Slug
 
         $this->convertWhitespaces();
 
-        $this->removeMultipleSeparators();
-
         $this->cleanSlug();
+
+        $this->removeMultipleSeparators();
 
         $this->trimSlug();
 
